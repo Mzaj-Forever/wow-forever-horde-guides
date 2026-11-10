@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "0.2.0",
+  "updatedOn": "2026-11-11",
+  "scope": "Public route previews only; canonical quest research remains in the ChatGPT project Library.",
+  "races": [
+    "Orc",
+    "Undead",
+    "Tauren",
+    "Troll"
+  ],
+  "classes": [
+    "Warrior",
+    "Hunter",
+    "Rogue",
+    "Priest",
+    "Shaman",
+    "Mage",
+    "Warlock",
+    "Druid"
+  ],
+  "guides": [
+    {
+      "id": "undead-warlock",
+      "race": "Undead",
+      "class": "Warlock",
+      "title": "Undead Warlock",
+      "version": "0.1.0-preview",
+      "status": "preview",
+      "statusLabel": "Research preview",
+      "shortDescription": "Deathknell, Brill, the early Warlock class quests, and planning for Silverpine and neighboring zones. A small preview, not a complete optimized route.",
+      "description": "Our first race/class route is being assembled from the researched Horde zones. These milestones demonstrate the guide-data system; precise quest batching, XP pacing, and zone transitions remain under review.",
+      "research": {
+        "sourceSnapshot": null,
+        "inGameStatus": "not live-tested",
+        "xpStatus": "not calculated",
+        "reason": "Earlier preview needs reconciliation against the latest canonical research snapshot before a source snapshot can be claimed."
+      },
+      "chapters": [
+        {
+          "id": "deathknell",
+          "title": "Deathknell",
+          "zone": "Deathknell / Tirisfal Glades",
+          "description": "Starter-zone orientation and source-reported Imp quest.",
+          "steps": [
+            {
+              "id": "uw-orientation-01",
+              "type": "note",
+              "title": "Begin your Undead journey",
+              "description": "Check the starter quest offers available to your character and complete local objectives. This is orientation, not a verified pickup order.",
+              "questIds": [],
+              "checkable": false,
+              "optional": false,
+              "batchId": null,
+              "dependsOn": [],
+              "conditions": {},
+              "xpEstimate": null
+            },
+            {
+              "id": "uw-q1470",
+              "type": "class_quest",
+              "title": "Piercing the Veil",
+              "description": "If offered, collect 3 Rattlecage Skulls for Venya Marthand to learn Summon Imp. This is separate from the ordinary skeleton-kill quest.",
+              "questIds": [
+                1470
+              ],
+              "checkable": true,
+              "optional": false,
+              "batchId": null,
+              "dependsOn": [],
+              "conditions": {
+                "races": [
+                  "Undead"
+                ],
+                "classes": [
+                  "Warlock"
+                ]
+              },
+              "xpEstimate": null
+            }
+          ]
+        },
+        {
+          "id": "brill",
+          "title": "Brill & Tirisfal",
+          "zone": "Tirisfal Glades",
+          "description": "A future batched route will replace this planning note.",
+          "steps": [
+            {
+              "id": "uw-brill-batch-planning",
+              "type": "note",
+              "title": "Build an efficient quest batch",
+              "description": "Collect compatible Brill-area quests and group turn-ins when practical. Specific NPC locations and optimized sequence are still being reconciled.",
+              "questIds": [],
+              "checkable": false,
+              "optional": false,
+              "batchId": "brill-planning-01",
+              "dependsOn": [],
+              "conditions": {},
+              "xpEstimate": null
+            }
+          ]
+        },
+        {
+          "id": "undercity-warlock",
+          "title": "Undercity · Warlock",
+          "zone": "Undercity / Tirisfal Glades",
+          "description": "Source-reported Voidwalker class chain. Complete only if the quests are offered.",
+          "steps": [
+            {
+              "id": "uw-q1478",
+              "type": "class_quest",
+              "title": "Halgar’s Summons",
+              "description": "At the source-reported minimum level 10, take the referral from Ageron Kargal in Brill to Carendin Halgar in Undercity, if offered.",
+              "questIds": [
+                1478
+              ],
+              "checkable": true,
+              "optional": false,
+              "batchId": null,
+              "dependsOn": [],
+              "conditions": {
+                "races": [
+                  "Undead"
+                ],
+                "classes": [
+                  "Warlock"
+                ],
+                "minLevel": 10
+              },
+              "xpEstimate": null
+            },
+            {
+              "id": "uw-q1473",
+              "type": "class_quest",
+              "title": "Creature of the Void",
+              "description": "Retrieve Egalin’s Grimoire from the Scarlet tower west of Undercity if this quest is available, then return to Carendin Halgar.",
+              "questIds": [
+                1473
+              ],
+              "checkable": true,
+              "optional": false,
+              "batchId": null,
+              "dependsOn": [
+                "uw-q1478"
+              ],
+              "conditions": {
+                "races": [
+                  "Undead"
+                ],
+                "classes": [
+                  "Warlock"
+                ]
+              },
+              "xpEstimate": null
+            },
+            {
+              "id": "uw-q1471",
+              "type": "class_quest",
+              "title": "The Binding",
+              "description": "Use the provided summoning runes at the ritual circle and defeat the Summoned Voidwalker if the quest is offered.",
+              "questIds": [
+                1471
+              ],
+              "checkable": true,
+              "optional": false,
+              "batchId": null,
+              "dependsOn": [
+                "uw-q1473"
+              ],
+              "conditions": {
+                "races": [
+                  "Undead"
+                ],
+                "classes": [
+                  "Warlock"
+                ]
+              },
+              "xpEstimate": null
+            }
+          ]
+        },
+        {
+          "id": "silverpine-planning",
+          "title": "Silverpine & next zones",
+          "zone": "Silverpine Forest / Hillsbrad Foothills / The Barrens",
+          "description": "Zone comparison is pending; no exact handoff has been certified.",
+          "steps": [
+            {
+              "id": "uw-zone-planning-01",
+              "type": "note",
+              "title": "Continue route planning",
+              "description": "Silverpine, Hillsbrad and The Barrens have research records. We will calculate and verify which transitions are most efficient before publishing exact level and travel instructions.",
+              "questIds": [],
+              "checkable": false,
+              "optional": false,
+              "batchId": null,
+              "dependsOn": [],
+              "conditions": {},
+              "xpEstimate": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
